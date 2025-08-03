@@ -1,73 +1,247 @@
-# Welcome to your Lovable project
+# Ankit Singhania - Portfolio Website
 
-## Project info
+A modern, responsive portfolio website built with React.js, TypeScript, Tailwind CSS, and Framer Motion.
 
-**URL**: https://lovable.dev/projects/00033203-fc97-482e-ab0e-fab9ee37476a
+## 🚀 Live Demo
+[View Portfolio](https://your-portfolio-url.vercel.app)
 
-## How can I edit this code?
+## 📋 Features
+- ✨ Modern and clean design
+- 🌑 Dark/Light mode toggle
+- 📱 Fully responsive (desktop, tablet, mobile)
+- 🎨 Smooth animations with Framer Motion
+- ⚡ Fast loading with Vite
+- 🔍 SEO optimized
+- 🎯 TypeScript for better development experience
 
-There are several ways of editing your application.
+## 🛠️ Tech Stack
+- **Frontend**: React.js 18+ with TypeScript
+- **Styling**: Tailwind CSS
+- **Animations**: Framer Motion
+- **Build Tool**: Vite
+- **Icons**: Lucide React
+- **UI Components**: Radix UI (shadcn/ui)
 
-**Use Lovable**
+## 📁 Project Structure
+```
+src/
+├── components/
+│   ├── ui/              # Reusable UI components (buttons, cards, etc.)
+│   ├── Navbar.tsx       # Navigation component
+│   ├── Hero.tsx         # Hero section
+│   ├── About.tsx        # About section
+│   ├── Skills.tsx       # Skills section
+│   ├── Projects.tsx     # Projects showcase
+│   ├── Contact.tsx      # Contact form
+│   ├── Footer.tsx       # Footer component
+│   ├── ThemeProvider.tsx # Theme context provider
+│   └── ThemeToggle.tsx  # Dark/light mode toggle
+├── pages/
+│   └── Index.tsx        # Main page component
+├── lib/
+│   └── utils.ts         # Utility functions
+├── hooks/               # Custom React hooks
+├── App.tsx              # Main App component
+├── main.tsx             # Entry point
+└── index.css            # Global styles and design tokens
+```
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/00033203-fc97-482e-ab0e-fab9ee37476a) and start prompting.
+## 🚀 Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
+### Prerequisites
+- Node.js (version 16 or higher)
+- npm or yarn package manager
 
-**Use your preferred IDE**
+### 📥 Getting the Code
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+#### Option 1: From Lovable to GitHub (Recommended)
+1. In your Lovable project, click on **GitHub** in the top-right corner
+2. Click **Connect to GitHub** and authorize the Lovable app
+3. Click **Create Repository** to create a new GitHub repository
+4. Clone the repository to your local machine:
+```bash
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+#### Option 2: Manual Setup
+If you prefer to set up manually, create a new directory and copy all the files from this Lovable project.
 
-Follow these steps:
+### 🔧 Local Development Setup
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Install dependencies**:
+```bash
+npm install
+```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+2. **Start the development server**:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+3. **Open your browser** and navigate to `http://localhost:5173`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+The development server supports hot-reload, so changes will appear instantly.
 
-**Use GitHub Codespaces**
+### 🏗️ Building for Production
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. **Create a production build**:
+```bash
+npm run build
+```
 
-## What technologies are used for this project?
+2. **Preview the production build locally** (optional):
+```bash
+npm run preview
+```
 
-This project is built with:
+The built files will be in the `dist/` directory.
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🌐 Deployment Options
 
-## How can I deploy this project?
+### Option 1: Vercel (Recommended)
+1. Install Vercel CLI:
+```bash
+npm install -g vercel
+```
 
-Simply open [Lovable](https://lovable.dev/projects/00033203-fc97-482e-ab0e-fab9ee37476a) and click on Share -> Publish.
+2. Deploy:
+```bash
+vercel
+```
 
-## Can I connect a custom domain to my Lovable project?
+3. Follow the prompts to connect your GitHub repository
 
-Yes, you can!
+### Option 2: Netlify
+1. **Via Netlify CLI**:
+```bash
+npm install -g netlify-cli
+npm run build
+netlify deploy --prod --dir=dist
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+2. **Via Netlify Web Interface**:
+   - Go to [netlify.com](https://netlify.com)
+   - Connect your GitHub repository
+   - Set build command: `npm run build`
+   - Set publish directory: `dist`
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+### Option 3: GitHub Pages
+1. **Install gh-pages**:
+```bash
+npm install --save-dev gh-pages
+```
+
+2. **Add to package.json scripts**:
+```json
+{
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  }
+}
+```
+
+3. **Deploy**:
+```bash
+npm run deploy
+```
+
+4. **Enable GitHub Pages** in your repository settings and set source to `gh-pages` branch
+
+### Option 4: Other Hosting Platforms
+The `dist/` folder after running `npm run build` contains static files that can be hosted on:
+- Firebase Hosting
+- AWS S3 + CloudFront
+- DigitalOcean App Platform
+- Heroku (with static buildpack)
+
+## ⚙️ Configuration
+
+### 📝 Updating Personal Information
+Edit the following files to customize with your information:
+
+1. **src/components/Hero.tsx** - Update name, role, and introduction
+2. **src/components/About.tsx** - Update education, stats, and description
+3. **src/components/Projects.tsx** - Add your projects with live links
+4. **src/components/Contact.tsx** - Update contact information
+5. **src/components/Footer.tsx** - Update social links
+6. **index.html** - Update meta tags and title
+
+### 🔗 Adding Your Resume
+1. Add your resume PDF to the `public/` directory
+2. Update the resume link in `src/components/Navbar.tsx`:
+```typescript
+const downloadResume = () => {
+  window.open("/your-resume.pdf", "_blank");
+};
+```
+
+### 🎨 Customizing Design
+- **Colors**: Modify design tokens in `src/index.css`
+- **Components**: Update UI components in `src/components/ui/`
+- **Animations**: Adjust Framer Motion settings in component files
+
+## 📦 Available Scripts
+
+| Command | Description |
+|---------|-------------|
+| `npm run dev` | Start development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+## 🔧 Dependencies
+
+### Main Dependencies
+- `react` & `react-dom` - React framework
+- `typescript` - Type safety
+- `vite` - Build tool
+- `tailwindcss` - CSS framework
+- `framer-motion` - Animations
+- `lucide-react` - Icons
+- `next-themes` - Theme management
+
+### UI Components
+- `@radix-ui/*` - Accessible UI primitives
+- `class-variance-authority` - Component variants
+- `clsx` & `tailwind-merge` - Class utilities
+
+## 🐛 Troubleshooting
+
+### Common Issues
+
+1. **Port already in use**:
+```bash
+# Kill process on port 5173
+npx kill-port 5173
+# Or use a different port
+npm run dev -- --port 3000
+```
+
+2. **Build errors**:
+```bash
+# Clear node_modules and reinstall
+rm -rf node_modules package-lock.json
+npm install
+```
+
+3. **Styling issues**:
+   - Ensure Tailwind CSS is properly configured
+   - Check `tailwind.config.ts` for correct paths
+
+## 📄 License
+This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+Feel free to fork this repository and submit pull requests for improvements.
+
+## 📞 Contact
+- **Email**: ankitsinghaniaaks@gmail.com
+- **GitHub**: [AnkitsinghaniaAKS](https://github.com/AnkitsinghaniaAKS)
+- **LinkedIn**: [ankit-singhania-aks](https://linkedin.com/in/ankit-singhania-aks)
+- **LeetCode**: [AnkitSinghania](https://leetcode.com/u/AnkitSinghania/)
+
+---
+
+**Made with ❤️ by Ankit Singhania**
