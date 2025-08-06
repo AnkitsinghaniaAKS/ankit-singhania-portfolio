@@ -12,11 +12,12 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
-      <div className="p-8">
-        <h1 className="text-2xl font-bold text-primary">Hero section above</h1>
-        <p className="text-foreground">Can you see the hero section?</p>
-      </div>
+      <Footer />
     </div>
   );
 };
