@@ -7,26 +7,13 @@ import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
-  console.log("Index component rendering");
-  
   return (
-    <div className="min-h-screen bg-white text-black">
-      <div className="p-8">
-        <h1 className="text-4xl font-bold text-blue-600">Test: Site is Working!</h1>
-        <p className="text-lg mt-4">If you can see this, React is working.</p>
-      </div>
-      {/* Temporarily comment out components to isolate the issue */}
-      {/*
+    <div className="min-h-screen bg-background">
       <Navbar />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Projects />
-        <Contact />
-      </main>
-      <Footer />
-      */}
+      <div className="p-8 mt-16">
+        <h1 className="text-4xl font-bold text-primary">Testing with Navbar</h1>
+        <p className="text-lg mt-4 text-foreground">Navbar should appear above this.</p>
+      </div>
     </div>
   );
 };
