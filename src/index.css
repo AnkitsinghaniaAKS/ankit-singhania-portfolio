@@ -139,15 +139,26 @@ All colors MUST be HSL.
   }
 
   .hero-text-gradient {
-    @apply bg-text-gradient bg-clip-text text-transparent bg-[length:200%_200%] animate-gradient-shift;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: gradient-shift 3s ease-in-out infinite;
   }
 
   .card-hover {
-    @apply transition-all duration-300 ease-out hover:scale-105 hover:shadow-card-hover;
+    @apply transition-all duration-300 ease-out hover:scale-105;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .card-hover:hover {
+    box-shadow: var(--card-hover-shadow);
   }
 
   .button-gradient {
-    @apply bg-hero-gradient text-primary-foreground border-0 transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg;
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
+    @apply text-primary-foreground border-0 transition-all duration-300 ease-out hover:scale-105 hover:shadow-lg;
   }
 
   .navbar-glass {
@@ -159,10 +170,23 @@ All colors MUST be HSL.
   }
 
   .project-card {
-    @apply bg-card border border-border rounded-lg p-6 shadow-card transition-all duration-300 hover:shadow-card-hover hover:scale-105;
+    @apply bg-card border border-border rounded-lg p-6 transition-all duration-300 hover:scale-105;
+    box-shadow: var(--card-shadow);
+  }
+  
+  .project-card:hover {
+    box-shadow: var(--card-hover-shadow);
   }
 
   .floating-element {
     @apply animate-bounce-subtle;
+  }
+  
+  .bg-section-gradient {
+    background: linear-gradient(to bottom, hsl(var(--background)), hsl(var(--muted)));
+  }
+  
+  .bg-hero-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
   }
 }
