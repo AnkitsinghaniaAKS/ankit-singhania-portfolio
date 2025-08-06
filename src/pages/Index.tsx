@@ -10,9 +10,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <div className="p-8 mt-16">
-        <h1 className="text-4xl font-bold text-primary">Testing with Navbar</h1>
-        <p className="text-lg mt-4 text-foreground">Navbar should appear above this.</p>
+      <main>
+        <Hero />
+      </main>
+      <div className="p-8">
+        <h1 className="text-2xl font-bold text-primary">Hero section above</h1>
+        <p className="text-foreground">Can you see the hero section?</p>
       </div>
     </div>
   );
