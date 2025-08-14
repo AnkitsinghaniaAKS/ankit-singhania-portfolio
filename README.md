@@ -52,20 +52,7 @@ src/
 - Node.js (version 16 or higher)
 - npm or yarn package manager
 
-### 📥 Getting the Code
 
-#### Option 1: From Lovable to GitHub (Recommended)
-1. In your Lovable project, click on **GitHub** in the top-right corner
-2. Click **Connect to GitHub** and authorize the Lovable app
-3. Click **Create Repository** to create a new GitHub repository
-4. Clone the repository to your local machine:
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
-```
-
-#### Option 2: Manual Setup
-If you prefer to set up manually, create a new directory and copy all the files from this Lovable project.
 
 ### 🔧 Local Development Setup
 
@@ -156,31 +143,6 @@ The `dist/` folder after running `npm run build` contains static files that can 
 - DigitalOcean App Platform
 - Heroku (with static buildpack)
 
-## ⚙️ Configuration
-
-### 📝 Updating Personal Information
-Edit the following files to customize with your information:
-
-1. **src/components/Hero.tsx** - Update name, role, and introduction
-2. **src/components/About.tsx** - Update education, stats, and description
-3. **src/components/Projects.tsx** - Add your projects with live links
-4. **src/components/Contact.tsx** - Update contact information
-5. **src/components/Footer.tsx** - Update social links
-6. **index.html** - Update meta tags and title
-
-### 🔗 Adding Your Resume
-1. Add your resume PDF to the `public/` directory
-2. Update the resume link in `src/components/Navbar.tsx`:
-```typescript
-const downloadResume = () => {
-  window.open("/your-resume.pdf", "_blank");
-};
-```
-
-### 🎨 Customizing Design
-- **Colors**: Modify design tokens in `src/index.css`
-- **Components**: Update UI components in `src/components/ui/`
-- **Animations**: Adjust Framer Motion settings in component files
 
 ## 📦 Available Scripts
 
@@ -243,5 +205,3 @@ Feel free to fork this repository and submit pull requests for improvements.
 - **LeetCode**: [AnkitSinghania](https://leetcode.com/u/AnkitSinghania/)
 
 ---
-
-**Made with ❤️ by Ankit Singhania**
